@@ -70,7 +70,7 @@ label {
 
 .container {
     width: 700px;
-    height: 600px;
+    height: 606px;
     text-align: center;
     border: 50px solid #DC143C;
     border-radius: 20px;
@@ -79,12 +79,17 @@ label {
 .container h1 {
     color: #FFD700;
     margin-top: -45px;
+    padding: 2px;
 }
 
 .grid {
     height: 505px;
-    width: 600px;
+    width: 599px;
     display: grid;
+}
+
+.colorGrid {
+    background-color: rgba(20, 20, 20, 0.1);
 }
 
 .left,
