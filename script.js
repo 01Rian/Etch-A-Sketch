@@ -60,3 +60,10 @@ function createGrid() {
 }
 
 sizeGrid.addEventListener('click', createGrid);
+
+reset.addEventListener('click', () => {
+    grid.innerHTML = '';
+    input.value = '';
+    place.innerHTML = '16x16';
+    defaultGrid();
+});
