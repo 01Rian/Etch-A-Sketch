@@ -12,7 +12,10 @@ function defaultGrid() {
         grid.style.setProperty("grid-template-columns", `repeat(16, 2fr)`);
         grid.style.setProperty("grid-template-rows", `repeat(16, 2fr)`);
     }
+    colorGrid();
+}
 
+function colorGrid() {
     const allColors = document.querySelectorAll('.colorGrid');
     for (color of allColors) {
         color.addEventListener('mouseover', (e) => {
@@ -27,7 +30,7 @@ function defaultGrid() {
     }
 }
 
-defaultGrid();
+window.addEventListener('load', () => defaultGrid());
 
 function createGrid() {
     if (!input.value) {
@@ -43,19 +46,7 @@ function createGrid() {
             div.classList.add('colorGrid');
             grid.appendChild(div);
         }
-
-        const allColors = document.querySelectorAll('.colorGrid');
-        for (color of allColors) {
-            color.addEventListener('mouseover', (e) => {
-                const colorBackground = getComputedStyle(e.target).backgroundColor;
-                const regex = /\d\.\d/;
-        
-                if (colorBackground.match(regex) !== null) {
-                    const colorOpacity = Number(colorBackground.match(regex));
-                    e.target.style.backgroundColor = colorBackground.replace(regex, colorOpacity + 0.2);
-                }
-            });
-        }
+        colorGrid();
     }
 }
 
