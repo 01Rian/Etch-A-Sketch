@@ -74,6 +74,7 @@ label {
     text-align: center;
     border: 52px solid #DC143C;
     border-radius: 20px;
+    user-select: none;
 }
 
 .container h1 {
